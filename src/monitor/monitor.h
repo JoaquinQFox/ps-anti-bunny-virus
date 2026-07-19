@@ -5,7 +5,7 @@
 #include <time.h>
 
 #define MAX_PATH 1024
-#define MAX_FILES 200
+#define MAX_FILES 4096
 
 typedef struct {
     char path[MAX_PATH];
@@ -19,5 +19,7 @@ typedef struct {
     int cantidad;
     time_t timestamp;
 } Snapshot;
+
+int monitor_scan(const char *base_path, Snapshot *snap);
 
 #endif
