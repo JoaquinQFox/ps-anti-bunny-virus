@@ -11,7 +11,6 @@ typedef struct {
     char path[MAX_PATH];
     off_t size;
     time_t timestamp;
-    int valid;
 } FileStatus;
 
 typedef struct {
@@ -21,5 +20,7 @@ typedef struct {
 } Snapshot;
 
 int monitor_scan(const char *base_path, Snapshot *snap);
+
+void print_snap(Snapshot *snap);
 
 #endif
